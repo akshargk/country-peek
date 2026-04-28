@@ -37,3 +37,43 @@
   margin-top: 10px;
   color: #777;
 }
+
+.country-page {
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.back-btn {
+  margin-bottom: 20px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+}
+
+.country-page__layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.country-page__flag {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.country-page__details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.border-badge {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
