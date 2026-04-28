@@ -2,6 +2,7 @@ import {BrowserRouter,Routes,Route} from "react-router-dom";
 import Header from "./components/Header"
 import Home from "./pages/Home"
 import NotFound from "./pages/NotFound"
+import './styles/App.css'
 
 function App(){
   return(
