@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import SearchBar from "../components/SearchBar";
 import CountryCard from "../components/CountryCard";
 
+
 function Home() {
   const [query, setQuery] = useState("");
   const [countries, setCountries] = useState([]);
@@ -64,4 +65,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Home;  
