@@ -116,3 +116,16 @@ main {
   border: 1px solid #ccc;
   border-radius: 5px;
 }
+
+.fav-btn {
+  margin-top: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #555;
+}
+
+.fav-btn--saved {
+  color: red;
+  font-weight: bold;
+} 
