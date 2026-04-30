@@ -13,7 +13,7 @@ function Home() {
   const [sortBy, setSortBy] = useState("");
 
   useEffect(() => {
-    if (!query) {
+    if (!query.trim()) {
       setCountries([]);
       return;
     }
@@ -40,7 +40,6 @@ function Home() {
     return () => clearTimeout(timer);
   }, [query]);
 
-  // ✅ Derived state (IMPORTANT)
   const displayed = [...countries]
     .filter((c) => region === "All" || c.region === region)
     .sort((a, b) => {
@@ -73,6 +72,10 @@ function Home() {
             <CountryCard key={country.cca3} country={country} />
           ))}
         </div>
+      )}
+
+      {!loading && !error && query && displayed.length === 0 && (
+        <p>No countries found.</p>
       )}
 
       {!query && <p className="home__status">Start searching...</p>}

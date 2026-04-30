@@ -7,7 +7,6 @@ function CountryCard({ country }) {
   const { name, flags, population, region, capital, cca3 } = country;
 
   const { favourites, dispatch } = useFavourites();
-
   const isSaved = favourites.some((f) => f.cca3 === cca3);
 
   function handleFav(e) {
@@ -24,7 +23,7 @@ function CountryCard({ country }) {
     <Link to={`/country/${cca3}`} className="card">
       <img
         src={flags?.svg}
-        alt={name?.common}
+        alt={`Flag of ${name?.common}`}
         className="card__flag"
       />
 
@@ -37,6 +36,12 @@ function CountryCard({ country }) {
         <button
           className={`fav-btn ${isSaved ? "fav-btn--saved" : ""}`}
           onClick={handleFav}
+          aria-label={
+            isSaved
+              ? `Remove ${name.common} from favourites`
+              : `Save ${name.common} to favourites`
+          }
+          aria-pressed={isSaved}
         >
           {isSaved ? "♥ Saved" : "♡ Save"}
         </button>
